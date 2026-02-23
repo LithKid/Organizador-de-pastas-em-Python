@@ -1,8 +1,13 @@
-import shutil
+import shutil 
+import sys
 from pathlib import Path
+print("argumentos recebidos:", sys.argv)
 
 def organizar_downloads():
-    downloads = Path.home() / "Downloads"
+    if len(sys.argv) > 1:
+        downloads = Path(sys.argv[1])
+    else:
+        downloads = Path.home() / "Downloads"
 
     pastas = {
         "Imagens": [".png", ".jpg", ".jpeg", ".gif"],
@@ -32,3 +37,5 @@ def organizar_downloads():
 
 if __name__ == "__main__":
     organizar_downloads()
+    print(sys.argv)
+    

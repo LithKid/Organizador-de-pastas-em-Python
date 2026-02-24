@@ -23,7 +23,8 @@ def organizar_downloads():
         "Planilhas": [".xlsx", ".xls", ".csv"],
         "Codigos": [".py", ".js", ".html", ".css"],
         "Compactados": [".zip", ".rar"],
-        "executaveis": [".exe", ".msi"]
+        "executaveis": [".exe", ".msi"],
+        "documentos": [".docx", ".doc", ".txt"]
     }
 
     # Cria as pastas se não existirem
